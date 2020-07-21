@@ -14,7 +14,7 @@
 .login__box{
   display: flex;
   justify-content: flex-end;
-  margin: 5% 15% 0 0;
+  margin: 5% 10% 0 0;
 }
 
 .login{
@@ -34,18 +34,60 @@
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  margin: 2% 15% 0 0 ;
+  margin: 2% 10% 0 0 ;
 
 }
 
 .nav__box-element{
   border: 0.75px solid transparent;
-  margin-right: 10px;
-  padding: 10px 5px;
+  margin-right: 15px;
+  padding: 10px 20px;
   font-size: 18px;
 
   &:hover{
     border: 0.75px solid $col-grafit;
+    cursor: pointer;
   }
 }
 
+.header__title-box{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header__title{
+  text-align: center;
+  color: $col-grafit;
+  font-size: 38px;
+  margin-bottom: 3%;
+  letter-spacing: -0.76px;
+  line-height: 1.4;
+}
+
+.header__btn-box{
+  margin-top: 6%;
+  display: flex;
+}
+
+.header__btn{
+  text-decoration: none;
+  color: $col-grafit;
+  font-weight: 300;
+  font-size: 36px;
+  text-transform: uppercase;
+  width: 310px;
+  height: 120px;
+  margin: 0 20px;
+  border: 0.75px solid $col-grafit;
+  line-height: 1.2;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
