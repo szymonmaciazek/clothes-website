@@ -1,0 +1,51 @@
+.home__container{
+  height: 85vh;
+}
+
+.home__hero{
+  margin-top: calc(2.5% + 1px);
+  background-image: url("./.././assets/Home-Hero-Image.jpg");
+  height: 95%;
+
+  background-position: right bottom;
+  background-size: cover;
+}
+
+.login__box{
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% 15% 0 0;
+}
+
+.login{
+  text-decoration: none;
+  color: $col-grafit;
+  border: 0.75px solid transparent;
+  padding: 10px 5px;
+  margin: 4px;
+  font-size: 14px;
+
+  &:hover{
+    border: 0.75px solid $col-yellow;
+  }
+}
+
+.nav__box{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2% 15% 0 0 ;
+
+}
+
+.nav__box-element{
+  border: 0.75px solid transparent;
+  margin-right: 10px;
+  padding: 10px 5px;
+  font-size: 18px;
+
+  &:hover{
+    border: 0.75px solid $col-grafit;
+  }
+}
+

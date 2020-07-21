@@ -1,14 +1,10 @@
-@import "reset.css";
-@import "variables";
+@import "reset";
 @import "./settings/fonts";
 @import "./settings/colors";
+@import "grid";
+@import "HomeHeader";
+@import "HomeThreeColumns";
 
 body {
   font-family: $font-base;
-}
-
-.testowa{
-  width: 100px;
-  height: 100px;
-  background-color: $col-grafit
 }
