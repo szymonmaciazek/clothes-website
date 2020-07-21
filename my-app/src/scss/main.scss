@@ -1,0 +1,14 @@
+@import "reset.css";
+@import "variables";
+@import "./settings/fonts";
+@import "./settings/colors";
+
+body {
+  font-family: $font-base;
+}
+
+.testowa{
+  width: 100px;
+  height: 100px;
+  background-color: $col-grafit
+}
