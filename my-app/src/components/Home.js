@@ -2,6 +2,7 @@ import React from 'react';
 import {HomeHeader} from "./HomeHeader";
 import {HomeThreeColumns} from "./HomeThreeColumns";
 import {HomeSteps} from "./HomeSteps";
+import {HomeAbout} from "./HomeAbout";
 
 
 export const Home = () => {
@@ -10,7 +11,8 @@ export const Home = () => {
 
             <HomeHeader/>
             <HomeThreeColumns/>
-            <HomeSteps />
+            <HomeSteps/>
+            <HomeAbout/>
 
         </>
 

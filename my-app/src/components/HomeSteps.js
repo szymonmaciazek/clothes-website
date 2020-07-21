@@ -16,7 +16,7 @@ export const HomeSteps = () => {
                 <img src={Decoration} alt={'Decoration'}/>
 
                 <div className={'col-12 steps__content'}>
-                    <div className={'col-10 steps__content-container'}>
+                    <div className={'col-8 steps__content-container'}>
                         <div className={'steps__content-column'}>
                             <img src={Icon1} alt={'Icon-1'}/>
                             <p className={'steps__content-column-title'}>Wybierz rzeczy</p>

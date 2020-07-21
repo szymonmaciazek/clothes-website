@@ -1,0 +1,43 @@
+.about__container{
+  background-color: $col-bone;
+  margin-top: 70px;
+  height: 50vw
+}
+
+.about__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__description-title{
+  font-size: 38px;
+  letter-spacing: -0.76px;
+  text-align: center;
+  color: $col-grafit
+}
+
+.about__decoration{
+  margin: 3% 0 5% 0 ;
+}
+
+.about__description-text{
+  font-size: 30px;
+  letter-spacing: -0.6px;
+  line-height: 2;
+  color: $col-grafit;
+  margin: 0 10%;
+  text-align: center;
+}
+
+.description{
+  margin: 3% 0 0 45%;
+  width: 30%;
+}
+
+.about__photo{
+  background-image: url("./.././assets/People.jpg");
+  background-position: center;
+  background-size: cover;
+}
