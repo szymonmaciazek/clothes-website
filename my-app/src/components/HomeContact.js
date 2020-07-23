@@ -43,7 +43,7 @@ export const HomeContact = () => {
                         <span className={'copyright '}>Copyright by Szymon</span>
                     </div>
                     <div className={'footer__media col-4'}>
-                        <a className={'facebook'} href={'http://facebook.com'} alt={'Instagram'}/>
+                        <a className={'facebook'} href={'http://facebook.com'} alt={'Facebook'}/>
                         <a className={'instagram'} href={'http://instagram.com'} alt={'Instagram'}/>
                     </div>
                 </div>

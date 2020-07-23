@@ -1,0 +1,48 @@
+.list__section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__container{
+  font-family: $font-alt;
+}
+
+.list__item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+
+  &:nth-of-type(2){
+    border-bottom: 1px solid $col-grafit;
+    border-top: 1px solid $col-grafit;
+    padding: 38px 0;
+  }
+}
+
+.list__item-left{
+
+}
+
+.list__item-company{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.list__item-goal{
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.list__item-right{
+  display: flex;
+  align-items: center;
+}
+
+.list__item-need{
+  font-size: 18px;
+  font-weight: 300;
+  align-self: center;
+}
