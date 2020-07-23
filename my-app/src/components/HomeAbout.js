@@ -5,7 +5,7 @@ import Signature from "../assets/Signature.svg"
 export const HomeAbout = () => {
     return (
         <>
-            <div className={'row about__container'}>
+            <div id='About' className={'row about__container'}>
                 <div className={'col-6 about__description'}>
                     <h2 className={'about__description-title'}>O nas</h2>
                     <img className={'about__decoration'} src={Decoration} alt={'Decoration'}/>

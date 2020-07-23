@@ -9,7 +9,7 @@ import Icon4 from "../assets/Icon-4.svg"
 export const HomeSteps = () => {
     return (
         <>
-            <div className={'row steps__container'}>
+            <div id='Steps' className={'row steps__container'}>
 
                 <h2 className={'steps__title'}>Wystarczą 4 proste kroki</h2>
                 <img src={Decoration} alt={'Decoration'}/>

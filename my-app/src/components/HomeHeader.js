@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Decoration from "../assets/Decoration.svg";
+import {Link as Scroll} from "react-scroll";
 
 export const HomeHeader = () => {
     return (
         <>
-            <div className={"row home__container"}>
+            <div id='Header' className={"row home__container"}>
                 <div className={"col-5 home__hero"}/>
                 <div className={"col-7 "}>
                     <div className={'login__box'}>
@@ -13,11 +14,11 @@ export const HomeHeader = () => {
                         <Link className={'login'} to={'/register'} href={'#'}>Załóż konto</Link>
                     </div>
                     <ul className={'nav__box'}>
-                        <li className={'nav__box-element'}>Start</li>
-                        <li className={'nav__box-element'}>O co chodzi?</li>
-                        <li className={'nav__box-element'}>O nas</li>
-                        <li className={'nav__box-element'}>Fundacja i organizacje</li>
-                        <li className={'nav__box-element'}>Kontakt</li>
+                        <Scroll to={'Header'} smooth={true} duration={1000} className={'nav__box-element'}>Start</Scroll>
+                        <Scroll to={'ThreeColumns'} smooth={true} duration={1000} className={'nav__box-element'}>O co chodzi?</Scroll>
+                        <Scroll to={'About'} smooth={true} duration={1000} className={'nav__box-element'}>O nas</Scroll>
+                        <Scroll to={'WeHelp'} smooth={true} duration={1000} className={'nav__box-element'}>Fundacja i organizacje</Scroll>
+                        <Scroll to={'Contact'} smooth={true} duration={1000} className={'nav__box-element'}>Kontakt</Scroll>
                     </ul>
                     <div className={'header__title-box'}>
                         <h2 className={'header__title'}>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce

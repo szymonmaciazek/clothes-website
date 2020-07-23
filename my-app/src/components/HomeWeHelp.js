@@ -60,7 +60,7 @@ export const HomeWeHelp = () => {
 
     return (
         <>
-            <div className={'row help__container'}>
+            <div id='WeHelp' className={'row help__container'}>
                 <div className={'help__box'}>
                     <h2 className={'help__box-title'}>Komu pomagamy?</h2>
                     <img className={'help__decoration'} src={Decoration} alt={'Decoration'}/>

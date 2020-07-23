@@ -4,7 +4,7 @@ export const HomeThreeColumns = () => {
     return (
         <>
 
-            <div className={"row"}>
+            <div id='ThreeColumns' className={"row"}>
                 <div className={'col-12 columns'}>
                     <div className={'column'}>
                         <h3 className={'column__number'}>10</h3>

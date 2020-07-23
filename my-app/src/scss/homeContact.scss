@@ -15,11 +15,13 @@
   width: 500px;
   display: flex;
   flex-direction: column;
-  margin-top: 300px;
+  margin-top: 200px;
 }
 
 .contact__form-title{
   text-align: center;
+  letter-spacing: -0.76px;
+  font-size: 38px;
 }
 
 .contact__decoration{
@@ -38,11 +40,13 @@
 .form__box-label{
   color: $col-grafit;
   font-size: 16px;
+
 }
 
 .form__box-input{
   border: none;
-  border-bottom: 1px solid $col-gray;
+  border-bottom: 2px solid $col-gray;
+  width: 240px;
 }
 
 .textarea__box{

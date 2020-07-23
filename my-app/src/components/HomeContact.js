@@ -4,7 +4,7 @@ import Decoration from "../assets/Decoration.svg";
 export const HomeContact = () => {
     return (
         <>
-            <div className={'row contact__container'}>
+            <div id='Contact' className={'row contact__container'}>
                 <div className={'contact__form'}>
                     <h2 className={'contact__form-title'}>Skontaktuj się z nami</h2>
                     <img className={'contact__decoration'} src={Decoration} alt={'Decoration'}/>
