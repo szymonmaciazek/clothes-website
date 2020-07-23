@@ -6,7 +6,6 @@ import Icon2 from "../assets/Icon-2.svg"
 import Icon3 from "../assets/Icon-3.svg"
 import Icon4 from "../assets/Icon-4.svg"
 
-
 export const HomeSteps = () => {
     return (
         <>
@@ -44,8 +43,6 @@ export const HomeSteps = () => {
                     </div>
                 </div>
                 <Link to={'/login'} href={'#'} className={'header__btn steps__btn'}>oddaj <br/> rzeczy</Link>
-
-
             </div>
         </>
     )
