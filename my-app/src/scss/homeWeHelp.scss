@@ -1,3 +1,50 @@
 .help__container{
-  background-color: $col-yellow;
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 70px;
+
+}
+
+.help__box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.help__box-title{
+text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -0.76px;
+  color: $col-grafit;
+  font-size: 38px;
+}
+
+.help__decoration{
+  margin-bottom: 60px;
+}
+
+.help__box-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.help__button{
+  color: $col-grafit;
+  font-size: 24px;
+  border: 1px solid transparent;
+  background: white;
+  width: 208px;
+  height: 80px;
+}
+
+.help__box-text{
+text-align: center;
+  margin: 60px auto 0 auto;
+  color: $col-grafit;
+}
+
+.active{
+  border: 1px solid $col-grafit;
+
 }
