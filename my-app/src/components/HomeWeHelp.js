@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Decoration from "../assets/Decoration.svg";
 import foundations from "../data/foundations";
 import organizations from "../data/organizations";
-import local from "../data/local";
+import local from "../data/collection";
 import {CompanyList} from "./CompanyList";
 import {Pagination} from "./Pagination";
 

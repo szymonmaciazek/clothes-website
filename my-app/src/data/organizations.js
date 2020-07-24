@@ -1,38 +1,38 @@
 export default [
     {
         "id": 1,
-        "name": 'Organizacja "Lorem-1"',
-        "goal": 'Flank shank ham hock pork loin. Tail sirloin beef meatball',
-        "items": 'RTV, AGD, ubrania'
+        "name": 'Organizacja "Lumen Caritas"',
+        "goal": 'Cel i misja: Pomoc poszkodowanym w krajach misyjnych',
+        "items": 'jedzenie, ubrania'
     },
     {
         "id": 2,
-        "name": 'Organizacja "Lorem-2"',
-        "goal": 'Beef ribs fatback kielbasa capicola brisket. Bacon strip steak .',
-        "items": 'ubrania,zabawki,AGD'
+        "name": 'Organizacja "Instytut Działań Miejskich"',
+        "goal": 'Cel i misja: Organizacja akcji charytatywnych na terenie Białegostoku',
+        "items": 'ubrania, zabawki, jedzenie'
     },
     {
         "id": 3,
-        "name": 'Organizacja "Lorem-3"',
-        "goal": 'Bacon ipsum dolor amet ball tip brisket fatback picanha.',
-        "items":'ubrania,koce,Art.gospodarstwa domowego'
+        "name": 'Organizacja "Dwie kreski"',
+        "goal": 'Cel i misja: Realizacja wsparcia dla samotnych matek i ojców',
+        "items":'ubrania'
     },
     {
-        "id": 4,
-        "name": 'Organizacja "Lorem-4"',
-        "goal": 'Turducken pork loin doner chuck pork belly ham hock',
-        "items":'agd,rtv,zabawki,koce'
+        "id": 3,
+        "name": 'Organizacja "Level UP"',
+        "goal": 'Cel i misja: Poprawa jakości życia lokalnej społeczności w mieście Łodzi',
+        "items":'ubrania, małe AGD, meble'
     },
     {
         "id": 5,
-        "name": 'Organizacja "Lorem-5"',
-        "goal": 'Swine picanha brisket, filet mignon bacon pig kielbasa corned beef shank.',
-        "items":'rtv,agd,ubrania,'
+        "name": 'Organizacja "Stowarzyszenie młodych"',
+        "goal": 'Cel i misja: Wsparcie schronisk dla zwierząt',
+        "items":'karma dla zwierząt, koce'
     },
     {
         "id": 6,
-        "name": 'Organizacja "Lorem-6"',
-        "goal": 'ail ribeye shoulder sausage, brisket shankle filet mignon hamburger.',
-        "items":'ubrania,karma dla zwierzat, art.dla zwierzat'
+        "name": 'Organizacja "Sun Sport"',
+        "goal": 'Cel i misja: Pomoc dzieciom w aktywnym wypoczynku i rozwoju podczas wyjazdów szkolnych',
+        "items":'ubrania'
     }
 ];

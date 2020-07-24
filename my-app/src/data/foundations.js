@@ -1,56 +1,48 @@
 export default [
     {
-        "id": 1,
         "name": 'Fundacja "Dbam o Zdrowie"',
         "goal": 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
         "items": 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'
     },
     {
-        "id": 2,
         "name": 'Fundacja "Dla dzieci"',
         "goal": 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
         "items": 'ubrania, meble, zabawki'
     },
     {
-        "id": 3,
         "name": 'Fundacja "Bez domu"',
         "goal": 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
         "items":'ubrania, jedzenie, ciepłe koce'
     },
     {
-        "id": 4,
-        "name": 'Fundacja "Lorem-1"',
-        "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
-        "items":'ubrania, jedzenie, meble, zabawki'
+        "name": 'Fundacja "Senior w koronie"',
+        "goal": 'Cel i misja: pomoc osobom starszym w czasie pandemii COVID-19',
+        "items":'jedzenie, sprzęty AGD, meble'
     },
     {
-        "id": 5,
-        "name": 'Fundacja "Lorem-2"',
-        "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
-        "items":'ubrania, meble, zabawki'
+        "name": 'Fundacja "Bank Żywności"',
+        "goal": 'Cel i misja: Zbiórki żywności oraz rozdzielanie jej wśród potrzebujących',
+        "items":'jedzenie'
     },
     {
-        "id": 6,
-        "name": 'Fundacja "Lorem-3"',
-        "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
-        "items":'ubrania, meble, zabawki'
+        "name": 'Fundacja "Damy radę"',
+        "goal": 'Cel i misja: Integracja osób poszkodowanych socjalnie',
+        "items":'ubrania, zabawki'
     },
     {
-        "id": 7,
-        "name": 'Fundacja "Lorem-4"',
-        "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
-        "items":'akcesoria, karma, zabawki, koce'
+        "name": 'Fundacja "Cztery pory roku"',
+        "goal": 'Cel i misja: Działalności na rzecz osób niepełnosprawnych',
+        "items":'ubrania, jedzenie'
     },
     {
-        "id": 8,
-        "name": 'Fundacja "Lorem-5"',
-        "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
-        "items":'ubrania, meble, zabawki'
+        "name": 'Fundacja "COR INFANTIS"',
+        "goal": 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
+        "items": 'ubrania, meble, zabawki'
     },
     {
-        "id": 9,
-        "name": 'Fundacja "Lorem-6"',
-        "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
-        "items": 'akcesoria, karma, sianko'
-    },
+        "name": 'Fundacja "Ludzie Serca"',
+        "goal": 'Cel i misja: Poprawa kondycji psychicznej dzieci z domów dziecka',
+        "items": 'zabawki ubrania'
+    }
+
 ];
