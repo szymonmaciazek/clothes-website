@@ -12,8 +12,20 @@ export const HomeContact = () => {
     const [contactMessage, setContactMessage] = useState({
         name: contactName,
         email: contactEmail,
-        notice: contactNotice
+        message: contactNotice
     })
+
+    const handleSubmitMessage = () =>{
+        let newMessage = {
+            name: contactName.trim(),
+            email: contactEmail,
+            message: contactNotice
+        }
+        setContactMessage(newMessage)
+    }
+    useEffect(() =>{
+        handleSubmitMessage()
+    },[contactNotice, contactEmail, contactName])
 
     const handleContactName = (e) =>{
         setContactName(e.target.value)
@@ -24,17 +36,7 @@ export const HomeContact = () => {
     const handleContactMessage = (e) =>{
         setContactNotice(e.target.value)
     }
-    const handleSubmitMessage = () =>{
-        let newMessage = {
-            name: contactName.trim(),
-            email: contactEmail,
-            notice: contactNotice
-        }
-        setContactMessage(newMessage)
-    }
-    useEffect(() =>{
-        handleSubmitMessage()
-    },[contactNotice, contactEmail, contactName])
+
     const handleSubmitData = () => {
         if(contactName.length<3 ){
             setNameErr("Podane imię jest nieprawidłowe!")
@@ -56,7 +58,8 @@ export const HomeContact = () => {
         e.preventDefault()
         handleSubmitData()
         console.log(contactMessage);
-        if(contactEmail.length > 1 && contactName.length >1 && contactNotice.length> 120){
+        console.log(contactMessage);
+        if(contactEmail.length > 1 && contactName.length >1 && contactNotice.length> 12){
             fetch('https://fer-api.coderslab.pl/v1/portfolio/contact',{
                 method: "POST",
                 body: JSON.stringify(contactMessage),
@@ -103,7 +106,7 @@ export const HomeContact = () => {
                         </div>
                         <div className={'textarea__box'}>
                             <label className={'textarea__box-label'} >Wpisz swoją wiadomość</label>
-                            <textarea onChange={handleContactMessage} className={'textarea__box-area'}
+                            <textarea rows={4} cols={4} onChange={handleContactMessage} className={'textarea__box-area'}
                                       placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do' +
                                       ' eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim' +
                                       ' veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo' +

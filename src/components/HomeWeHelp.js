@@ -10,9 +10,9 @@ export const HomeWeHelp = () => {
     const [company, setCompany] = useState(foundations)
     const [currPage, setCurrPage] = useState(1);
     const [companysPerPage] = useState(3);
-    const [whoFun, setWhoFun] = useState('help__button')
-    const [whoOrg, setWhoOrg] = useState('help__button')
-    const [whoLoc, setWhoLoc] = useState('help__button')
+    const [whoFun, setWhoFun] = useState('help__button');
+    const [whoOrg, setWhoOrg] = useState('help__button');
+    const [whoLoc, setWhoLoc] = useState('help__button');
 
     const handleToFundation = () =>{
         setCompany(foundations);
@@ -29,7 +29,6 @@ export const HomeWeHelp = () => {
         whoIsActive3()
         setCurrPage(1)
     }
-
     const whoIsActive = () =>{
         if(company === foundations) {
           setWhoFun("help__button active")
@@ -55,8 +54,7 @@ export const HomeWeHelp = () => {
         whoIsActive()
         whoIsActive2()
         whoIsActive3()
-    },[handleToFundation, handleToOrganizations,handleToLocals])
-
+    },[handleToFundation, handleToOrganizations,handleToLocals]);
     const paginate = (pageNumber) => {
         setCurrPage(pageNumber)
     }
