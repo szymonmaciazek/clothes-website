@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Decoration from "../assets/Decoration.svg";
 
 export const HomeContact = () => {
     const [contactName, setContactName] = useState('')
     const [contactEmail, setContactEmail] = useState('')
     const [contactNotice, setContactNotice] = useState('')
-    const [nameErr, serNameErr] = useState('')
-    const [emailErr, serEmailErr] = useState('')
-    const [noticeErr, serNoticeErr] = useState('')
+    const [nameErr, setNameErr] = useState('')
+    const [emailErr, setEmailErr] = useState('')
+    const [noticeErr, setNoticeErr] = useState('')
+    const [successMessage, setSuccessMessage] = useState('')
     const [contactMessage, setContactMessage] = useState({
         name: contactName,
         email: contactEmail,
@@ -23,17 +24,60 @@ export const HomeContact = () => {
     const handleContactMessage = (e) =>{
         setContactNotice(e.target.value)
     }
-
-    const handleSubmit = () =>{
+    const handleSubmitMessage = () =>{
         let newMessage = {
             name: contactName.trim(),
             email: contactEmail,
             notice: contactNotice
         }
         setContactMessage(newMessage)
-
     }
-
+    useEffect(() =>{
+        handleSubmitMessage()
+    },[contactNotice, contactEmail, contactName])
+    const handleSubmitData = () => {
+        if(contactName.length<3 ){
+            setNameErr("Podane imię jest nieprawidłowe!")
+        }else{
+            setNameErr("");
+        }
+        if(contactEmail<3 && !contactEmail.includes("@")){
+            setEmailErr("Podany email jest nieprawidłowy!")
+        }else{
+            setEmailErr("");
+        }
+        if(contactNotice.length< 120){
+            setNoticeErr("Wiadomość musi mieć 120 znaków!")
+        }else{
+            setNoticeErr("");
+        }
+    }
+    const sendMessage = (e) =>{
+        e.preventDefault()
+        handleSubmitData()
+        console.log(contactMessage);
+        if(contactEmail.length > 1 && contactName.length >1 && contactNotice.length> 120){
+            fetch('https://fer-api.coderslab.pl/v1/portfolio/contact',{
+                method: "POST",
+                body: JSON.stringify(contactMessage),
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            })
+                .then((response) => {
+                    if(response.status === 200){
+                        setSuccessMessage("Wiadomość została wysłana! Wkrótce sie z Tobą skontaktujemy")
+                        return response.json();
+                    } else if(response.status === 400){
+                        console.log(response);
+                    }
+                })
+                .then( data => console.log(data))
+                .catch( err => console.log(err));
+        }else{
+            return false
+        }
+    }
 
     return (
         <>
@@ -41,30 +85,30 @@ export const HomeContact = () => {
                 <div className={'contact__form'}>
                     <h2 className={'contact__form-title'}>Skontaktuj się z nami</h2>
                     <img className={'contact__decoration'} src={Decoration} alt={'Decoration'}/>
-                    <form>
+                    <p className={'successMessage'}>{successMessage}</p>
+                    <form onSubmit={sendMessage}>
                         <div className={'form__container'}>
                             <div className={'form__box'}>
                                 <label className={'form__box-label'}>Wpisz swoje imię</label>
                                 <input className={'form__box-input'} onChange={handleContactName} placeholder={'Szymon'} id={'name'}
                                        name="question" type="text"/>
-                                <p className={'test'}> </p>
+                                <p className={'contact__warning'}> {nameErr}</p>
                             </div>
                             <div className={'form__box'}>
                                 <label className={'form__box-label'}>Wpisz swój email</label>
                                 <input className={'form__box-input'} onChange={handleContactEmail} placeholder={'xyz@mail.com'} id={'email'}
-                                       name="question" type="text"/>
-                                <p className={'test'}> </p>
+                                       name="question" type="email"/>
+                                <p className={'contact__warning'}>{emailErr} </p>
                             </div>
-
                         </div>
                         <div className={'textarea__box'}>
-                            <label className={'textarea__box-label'} onChange={handleContactMessage}>Wpisz swoją wiadomość</label>
-                            <textarea className={'textarea__box-area'}
+                            <label className={'textarea__box-label'} >Wpisz swoją wiadomość</label>
+                            <textarea onChange={handleContactMessage} className={'textarea__box-area'}
                                       placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do' +
                                       ' eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim' +
                                       ' veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo' +
                                       ' consequat.'}/>
-                                      <p> </p>
+                                      <p className={'contact__warning'}>{noticeErr} </p>
                         </div>
                         <div className={'form__btn-box'}>
                             <button className={'form__btn'}>Wyślij</button>
@@ -74,7 +118,7 @@ export const HomeContact = () => {
                 <div className={'footer'}>
                     <div className={'footer1 col-4'}/>
                     <div className={'footer2 col-4'}>
-                        <span className={'copyright '}>Copyright by Szymon</span>
+                        <span className={'copyright '}>Copyright by CodersLab</span>
                     </div>
                     <div className={'footer__media col-4'}>
                         <a className={'facebook'} href={'http://facebook.com'} alt={'Facebook'}/>

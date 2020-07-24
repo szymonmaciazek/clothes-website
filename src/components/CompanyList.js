@@ -16,9 +16,7 @@ export const CompanyList = ({company}) =>{
                                 <p className={'list__item-need'}>{elem.items}</p>
                             </div>
                         </li>
-
                     ))}
-
                 </ul>
             </div>
         </>

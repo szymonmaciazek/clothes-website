@@ -56,22 +56,25 @@
 
 .textarea__box-label{
   margin-bottom: 5px;
+  background: transparent;
 }
 
 .textarea__box-area{
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
   font-size: 15px;
   border: none;
   border-bottom: 1px solid $col-gray;
   resize: none;
   height: 90px;
-  color: #3C3C3C26;
+  //color: #3C3C3C26;
   font-family: $font-base;
+  background: transparent;
 }
 
 .form__btn-box{
   display: flex;
   justify-content: flex-end;
+  margin-top: 40px;
 }
 
 .form__btn{
@@ -79,6 +82,20 @@
   height: 50px;
   background: white;
   border: 0.75px solid $col-grafit;
+}
+
+.contact__warning{
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.contact__success{
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .footer{
