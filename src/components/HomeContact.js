@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Decoration from "../assets/Decoration.svg";
+import foundations from "../data/foundations";
 
 export const HomeContact = () => {
     const [contactName, setContactName] = useState('')
@@ -9,6 +10,7 @@ export const HomeContact = () => {
     const [emailErr, setEmailErr] = useState('')
     const [noticeErr, setNoticeErr] = useState('')
     const [successMessage, setSuccessMessage] = useState('')
+    const [sendMessageClass, setSendMessageClass] = useState('')
     const [contactMessage, setContactMessage] = useState({
         name: contactName,
         email: contactEmail,
@@ -26,7 +28,6 @@ export const HomeContact = () => {
     useEffect(() =>{
         handleSubmitMessage()
     },[contactNotice, contactEmail, contactName])
-
     const handleContactName = (e) =>{
         setContactName(e.target.value)
     }
@@ -36,7 +37,6 @@ export const HomeContact = () => {
     const handleContactMessage = (e) =>{
         setContactNotice(e.target.value)
     }
-
     const handleSubmitData = () => {
         if(contactName.length<3 ){
             setNameErr("Podane imię jest nieprawidłowe!")
@@ -69,9 +69,13 @@ export const HomeContact = () => {
             })
                 .then((response) => {
                     if(response.status === 200){
-                        setSuccessMessage("Wiadomość została wysłana! Wkrótce sie z Tobą skontaktujemy")
+                        setSuccessMessage("Wiadomość została wysłana! Wkrótce sie skontaktujemy")
+                        setSendMessageClass('contact__sendMessage')
+                        resetForm()
                         return response.json();
                     } else if(response.status === 400){
+                        setSuccessMessage("Błąd serwera! Wiadomość nie została wysłana")
+                        setSendMessageClass('contact__sendMessage contact__sendMessage-warning')
                         console.log(response);
                     }
                 })
@@ -80,25 +84,22 @@ export const HomeContact = () => {
         }else{
             return false
         }
-        resetForm()
     }
-
     const resetForm = () =>{
         setContactName('')
         setContactEmail('')
         setContactNotice('')
     }
-
     return (
         <>
             <div id='Contact' className={'row contact__container'}>
                 <div className={'contact__form'}>
                     <h2 className={'contact__form-title'}>Skontaktuj się z nami</h2>
                     <img className={'contact__decoration'} src={Decoration} alt={'Decoration'}/>
-                    <p className={'successMessage'}>{successMessage}</p>
+                    <p className={sendMessageClass}>{successMessage}</p>
                     <form onSubmit={sendMessage}>
                         <div className={'form__container'}>
-                            <div className={'form__box'}>
+                            <div className={'form__box form__box-left'}>
                                 <label className={'form__box-label'}>Wpisz swoje imię</label>
                                 <input value={contactName} className={'form__box-input'} onChange={handleContactName} placeholder={'Szymon'} id={'name'}
                                        name="question" type="text"/>
