@@ -3,19 +3,19 @@ import Decoration from "../assets/Decoration.svg";
 import foundations from "../data/foundations";
 
 export const HomeContact = () => {
-    const [contactName, setContactName] = useState('')
-    const [contactEmail, setContactEmail] = useState('')
-    const [contactNotice, setContactNotice] = useState('')
-    const [nameErr, setNameErr] = useState('')
-    const [emailErr, setEmailErr] = useState('')
-    const [noticeErr, setNoticeErr] = useState('')
-    const [successMessage, setSuccessMessage] = useState('')
-    const [sendMessageClass, setSendMessageClass] = useState('')
+    const [contactName, setContactName] = useState('');
+    const [contactEmail, setContactEmail] = useState('');
+    const [contactNotice, setContactNotice] = useState('');
+    const [nameErr, setNameErr] = useState('');
+    const [emailErr, setEmailErr] = useState('');
+    const [noticeErr, setNoticeErr] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
+    const [sendMessageClass, setSendMessageClass] = useState('contact__sendMessage');
     const [contactMessage, setContactMessage] = useState({
         name: contactName,
         email: contactEmail,
         message: contactNotice
-    })
+    });
 
     const handleSubmitMessage = () =>{
         let newMessage = {

@@ -44,5 +44,4 @@ export default [
         "goal": 'Cel i misja: Poprawa kondycji psychicznej dzieci z domów dziecka',
         "items": 'zabawki ubrania'
     }
-
 ];

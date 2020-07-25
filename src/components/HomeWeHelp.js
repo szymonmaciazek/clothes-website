@@ -7,7 +7,7 @@ import {CompanyList} from "./CompanyList";
 import {Pagination} from "./Pagination";
 
 export const HomeWeHelp = () => {
-    const [company, setCompany] = useState(foundations)
+    const [company, setCompany] = useState(foundations);
     const [currPage, setCurrPage] = useState(1);
     const [companyPerPage] = useState(3);
     const [whoFun, setWhoFun] = useState('help__button');
@@ -21,39 +21,31 @@ export const HomeWeHelp = () => {
     }
     const handleToOrganizations = () =>{
         setCompany(organizations);
-        whoIsActive2()
+        whoIsActive()
         setCurrPage(1)
     }
     const handleToLocals = () =>{
         setCompany(local);
-        whoIsActive3()
+        whoIsActive()
         setCurrPage(1)
     }
-    const whoIsActive = () =>{
-        if(company === foundations) {
-          setWhoFun("help__button active")
-        }else{
-            setWhoFun("help__button")
-        }
-    }
-    const whoIsActive2 = () =>{
-        if(company === organizations) {
-            setWhoOrg("help__button active")
-        }else{
-            setWhoOrg("help__button")
-        }
-    }
-    const whoIsActive3 = () =>{
-        if(company === local) {
-            setWhoLoc("help__button active")
-        }else{
+    const whoIsActive = () => {
+        if (company === foundations) {
+            setWhoFun("help__button active")
             setWhoLoc("help__button")
+            setWhoOrg("help__button")
+        } else if(company === organizations){
+            setWhoFun("help__button")
+            setWhoLoc("help__button")
+            setWhoOrg("help__button active")
+        }else if(company === local){
+            setWhoFun("help__button ")
+            setWhoLoc("help__button active")
+            setWhoOrg("help__button")
         }
     }
     useEffect(() =>{
         whoIsActive()
-        whoIsActive2()
-        whoIsActive3()
     },[handleToFoundation, handleToOrganizations,handleToLocals]);
     const paginate = (pageNumber) => {
         setCurrPage(pageNumber)

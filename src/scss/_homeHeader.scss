@@ -6,7 +6,6 @@
   margin-top: calc(2.5% + 1px);
   background-image: url("./.././assets/Home-Hero-Image.jpg");
   height: 95%;
-
   background-position: right bottom;
   background-size: cover;
 }
@@ -35,7 +34,6 @@
   display: flex;
   justify-content: flex-end;
   margin: 2% 10% 0 0 ;
-
 }
 
 .nav__box-element{
@@ -56,7 +54,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .header__title{
@@ -84,10 +81,8 @@
   margin: 0 20px;
   border: 0.75px solid $col-grafit;
   line-height: 1.2;
-
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }

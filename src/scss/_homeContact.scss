@@ -40,7 +40,6 @@
 .form__box-label{
   color: $col-grafit;
   font-size: 16px;
-
 }
 
 .form__box-input{
@@ -61,13 +60,11 @@
 }
 
 .textarea__box-area{
-  //margin-bottom: 40px;
   font-size: 15px;
   border: none;
   border-bottom: 1px solid $col-gray;
   resize: none;
   height: 90px;
-  //color: #3C3C3C26;
   font-family: $font-base;
   background: transparent;
 }

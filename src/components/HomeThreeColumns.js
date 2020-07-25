@@ -3,7 +3,6 @@ import React from 'react';
 export const HomeThreeColumns = () => {
     return (
         <>
-
             <div id='ThreeColumns' className={"row"}>
                 <div className={'col-12 columns'}>
                     <div className={'column'}>
@@ -23,9 +22,6 @@ export const HomeThreeColumns = () => {
                     </div>
                 </div>
             </div>
-
         </>
-
-
     )
 }
