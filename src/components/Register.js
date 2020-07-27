@@ -23,7 +23,6 @@ export const Register = () => {
                         <Scroll to={'Contact'} smooth={true} duration={1000} className={'nav__box-element'}>Kontakt</Scroll>
                     </ul>
                 </div>
-
             </div>
             <div className={'row'}>
                 <div className={'login__container col-12'}>
