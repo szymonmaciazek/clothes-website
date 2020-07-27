@@ -101,20 +101,20 @@ export const HomeContact = () => {
                         <div className={'form__container'}>
                             <div className={'form__box form__box-left'}>
                                 <label className={'form__box-label'}>Wpisz swoje imię</label>
-                                <input value={contactName} className={'form__box-input'} onChange={handleContactName} placeholder={'Szymon'} id={'name'}
+                                <input value={contactName} className={(nameErr === '' ? 'form__box-input' : 'form__box-inputError' )} onChange={handleContactName} placeholder={'Szymon'} id={'name'}
                                        name="question" type="text"/>
                                 <p className={'contact__warning'}> {nameErr}</p>
                             </div>
                             <div className={'form__box'}>
                                 <label className={'form__box-label'}>Wpisz swój email</label>
-                                <input value={contactEmail} className={'form__box-input'} onChange={handleContactEmail} placeholder={'xyz@mail.com'} id={'email'}
+                                <input value={contactEmail} className={(emailErr === '' ? 'form__box-input' : 'form__box-inputError' )} onChange={handleContactEmail} placeholder={'xyz@mail.com'} id={'email'}
                                        name="question" type="email"/>
                                 <p className={'contact__warning'}>{emailErr} </p>
                             </div>
                         </div>
                         <div className={'textarea__box'}>
                             <label className={'textarea__box-label'} >Wpisz swoją wiadomość</label>
-                            <textarea value={contactNotice} rows={4} cols={4} onChange={handleContactMessage} className={'textarea__box-area'}
+                            <textarea value={contactNotice} rows={4} cols={4} onChange={handleContactMessage} className={(noticeErr === '' ? 'textarea__box-area' : 'textarea__box-areaError')}
                                       placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do' +
                                       ' eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim' +
                                       ' veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo' +

@@ -70,7 +70,7 @@ export const HomeWeHelp = () => {
                     współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
             </div>
             <CompanyList company={currentCompany} />
-            <Pagination postsPerPage={companyPerPage} totalPosts={company.length} paginate={paginate} />
+            <Pagination currPage={currPage} postsPerPage={companyPerPage} totalPosts={company.length} paginate={paginate}/>
         </>
     )
 }

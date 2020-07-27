@@ -49,6 +49,13 @@
   background-color: transparent;
 }
 
+.form__box-inputError{
+  border: none;
+  border-bottom: 2px solid red;
+  width: 240px;
+  background-color: transparent;
+}
+
 .textarea__box{
   display: flex;
   flex-direction: column;
@@ -63,6 +70,16 @@
   font-size: 15px;
   border: none;
   border-bottom: 1px solid $col-gray;
+  resize: none;
+  height: 90px;
+  font-family: $font-base;
+  background: transparent;
+}
+
+.textarea__box-areaError{
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid red;
   resize: none;
   height: 90px;
   font-family: $font-base;
@@ -87,6 +104,7 @@
   font-size: 12px;
   font-weight: bold;
   margin-top: 5px;
+  height: 13px;
 }
 
 .contact__sendMessage{
