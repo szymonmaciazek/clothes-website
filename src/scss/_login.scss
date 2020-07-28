@@ -4,22 +4,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 123px;
+  margin-top: 50px;
 }
 
 .login__container-title{
   letter-spacing: -0.8px;
   font-size: 40px;
   text-align: center;
-  margin-bottom: 39px;
+  margin-bottom: 15px;
 }
 
 .login__container-box{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 67px;
-  width: 385px;
+  margin-top: 20px;
+  width: 365px;
   height: 235px;
   background-color: $col-bone;
 }
@@ -59,7 +59,7 @@
 .login__button-box{
   display: flex;
   justify-content: space-between;
-  margin: 40px -50px;
+  margin: 20px -50px;
 
 }
 
@@ -70,5 +70,5 @@
 }
 
 .register__box{
-  height: 328px;
+  height: 300px;
 }
