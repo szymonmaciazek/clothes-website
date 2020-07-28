@@ -32,15 +32,15 @@ export const Register = () => {
                     <form>
                         <div className={'login__container-box register__box'}>
                             <div className={'login__container-inputs'}>
-                                <label className={'login__label login__label-email'}>Email</label>
-                                <input className={'login__input'} type={'email'}/>
-                                <p className={'login__warning'}>test</p>
+                                <label className={'login__label login__label-email'} >Email</label>
+                                <input className={'login__input'} name={'email'} type={'text'} value={user.email} onChange={handleChangeUserData}/>
+                                <p className={'login__warning'}>{emailErr}</p>
                                 <label className={'login__label'}>Hasło</label>
-                                <input className={'login__input'} type={'password'}/>
-                                <p className={'login__warning'}>test</p>
-                                <label className={'login__label'}>Powtórz Hasło</label>
-                                <input className={'login__input'} type={'password'}/>
-                                <p className={'login__warning'}>test</p>
+                                <input className={'login__input'} type={'password'} name={'password'} onChange={handleChangeUserData}/>
+                                <p className={'login__warning'}>{passwordErr}</p>
+                                <label className={'login__label'}>Hasło</label>
+                                <input className={'login__input'} type={'password'} name={'password'} onChange={handleChangeUserData}/>
+                                <p className={'login__warning'}>{passwordErr1}</p>
                             </div>
                         </div>
                         <div className={'login__button-box'}>
