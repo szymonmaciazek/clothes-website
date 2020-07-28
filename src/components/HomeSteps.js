@@ -10,10 +10,8 @@ export const HomeSteps = () => {
     return (
         <>
             <div id='Steps' className={'row steps__container'}>
-
                 <h2 className={'steps__title'}>Wystarczą 4 proste kroki</h2>
                 <img src={Decoration} alt={'Decoration'}/>
-
                 <div className={'col-12 steps__content'}>
                     <div className={'col-8 steps__content-container'}>
                         <div className={'steps__content-column'}>

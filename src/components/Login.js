@@ -9,7 +9,7 @@ export const Login = () => {
         password: "",
     });
     const[emailErr,setEmailErr] = useState("");
-    const[passwordErr,setPasswordErr] = useState("")
+    const[passwordErr,setPasswordErr] = useState("");
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -73,5 +73,5 @@ export const Login = () => {
                 </div>
             </div>
         </>
-    )
+    );
 }
