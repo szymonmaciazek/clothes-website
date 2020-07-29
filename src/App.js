@@ -5,8 +5,7 @@ import {Home} from "./components/Home"
 import {Login} from "./components/Login";
 import {Register} from "./components/Register";
 import {Logout} from "./components/Logout";
-import {HandoverHeader} from "./components/Handover";
-
+import {Handover} from "./components/Handover";
 
 function App() {
 
@@ -17,10 +16,9 @@ function App() {
           <Route path='/login' component={Login}/>
           <Route path='/register' component={Register}/>
           <Route path='/logout' component={Logout} />
-          <Route path='/handover' component={HandoverHeader} />
+          <Route path='/handover' component={Handover} />
         </>
       </HashRouter>
   );
 }
-
 export default App;

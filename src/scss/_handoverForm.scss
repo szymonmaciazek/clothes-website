@@ -1,0 +1,33 @@
+.warning__box{
+  height: 140px;
+  width: 100%;
+  background-color: $col-yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.warning__title{
+  margin: 0 0 8px 8%;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.warning__text{
+  margin: 0 8% 0 8%;
+  font-size: 22px;
+  color: $col-grafit;
+}
+
+.form__steps-container{
+  background-image: url("./.././assets/Background-Form.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vw;
+  background-repeat: no-repeat;
+}
+
+.steps__form{
+  display: flex;
+  flex-direction: column;
+}
