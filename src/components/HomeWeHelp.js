@@ -14,17 +14,17 @@ export const HomeWeHelp = () => {
     const [whoOrg, setWhoOrg] = useState('help__button');
     const [whoLoc, setWhoLoc] = useState('help__button');
 
-    const handleToFoundation = () =>{
+    const handleToFoundation = () => {
         setCompany(foundations);
         whoIsActive()
         setCurrPage(1)
     }
-    const handleToOrganizations = () =>{
+    const handleToOrganizations = () => {
         setCompany(organizations);
         whoIsActive()
         setCurrPage(1)
     }
-    const handleToLocals = () =>{
+    const handleToLocals = () => {
         setCompany(local);
         whoIsActive()
         setCurrPage(1)
@@ -34,11 +34,13 @@ export const HomeWeHelp = () => {
             setWhoFun("help__button active")
             setWhoLoc("help__button")
             setWhoOrg("help__button")
-        } else if(company === organizations){
+        }
+        else if(company === organizations){
             setWhoFun("help__button")
             setWhoLoc("help__button")
             setWhoOrg("help__button active")
-        }else if(company === local){
+        }
+        else if(company === local){
             setWhoFun("help__button ")
             setWhoLoc("help__button active")
             setWhoOrg("help__button")

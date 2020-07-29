@@ -1,8 +1,8 @@
 import React from "react";
 
-export const CompanyList = ({company}) =>{
+export const CompanyList = ({company}) => {
 
-    return(
+    return (
         <>
             <div className={'row list__section'}>
                 <ul className={'col-10 list_container'}>

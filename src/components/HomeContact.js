@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Decoration from "../assets/Decoration.svg";
-import foundations from "../data/foundations";
 
 export const HomeContact = () => {
     const [contactName, setContactName] = useState('');
@@ -37,7 +36,7 @@ export const HomeContact = () => {
     const handleContactMessage = (e) =>{
         setContactNotice(e.target.value)
     }
-    const handleSubmitData = () => {
+    const handleSubmit = () => {
         if(contactName.length<3 ){
             setNameErr("Podane imię jest nieprawidłowe!")
         }else{
@@ -56,10 +55,10 @@ export const HomeContact = () => {
     }
     const sendMessage = (e) =>{
         e.preventDefault()
-        handleSubmitData()
+        handleSubmit()
         console.log(contactMessage);
         console.log(contactMessage);
-        if(contactEmail.length > 1 && contactName.length >1 && contactNotice.length> 12){
+        if(contactEmail.length > 1 && contactName.length >1 && contactNotice.length> 120){
             fetch('https://fer-api.coderslab.pl/v1/portfolio/contact',{
                 method: "POST",
                 body: JSON.stringify(contactMessage),
