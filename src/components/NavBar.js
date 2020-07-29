@@ -1,11 +1,9 @@
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 import React from "react";
-import Decoration from "../assets/Decoration.svg";
 
 export const NavBar = () => {
     return (
-
         <>
             <div className={'login__box'}>
                 <Link className={'login'} to={'/login'} href={'#'}>Zaloguj</Link>

@@ -1,0 +1,50 @@
+.handover__hero{
+  margin-top: calc(2.5% + 1px);
+  background-image: url("./.././assets/Form-Hero-Image.jpg");
+  height: 95%;
+  background-position: right bottom;
+  background-size: cover;
+}
+
+.handover__title-box{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15%;
+}
+
+.handover__diamonds{
+  display: flex;
+  margin-top: 30px;
+}
+
+.diamond{
+  border: 1px solid $col-grafit;
+  transform: rotate(45deg);
+  width: 140px;
+  height: 140px;
+}
+
+.diamondL{
+  transform: rotate(-45deg);
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+}
+
+.diamond__number{
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+
+.diamond__text{
+  font-size: 20px;
+  text-align: center;
+  font-weight: lighter;
+  line-height: 1.24;
+}

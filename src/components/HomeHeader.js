@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Decoration from "../assets/Decoration.svg";
-import {Link as Scroll} from "react-scroll";
-import {HashLink} from "react-router-hash-link";
 import {NavBar} from "./NavBar";
 
 export const HomeHeader = () => {
@@ -17,7 +15,7 @@ export const HomeHeader = () => {
                         </h2>
                         <img src={Decoration} alt={'Decoration'}/>
                         <div className={'header__btn-box'}>
-                            <Link to={'/login'} href={'#'} className={'header__btn'}>oddaj <br/> rzeczy</Link>
+                            <Link to={'/handover'} href={'#'} className={'header__btn'}>oddaj <br/> rzeczy</Link>
                             <Link to={'/login'} href={'#'} className={'header__btn'}>zorganizuj <br/> zbiórkę</Link>
                         </div>
                     </div>

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import Decoration from "../assets/Decoration.svg";
-import {HashLink} from "react-router-hash-link";
 import {NavBar} from "./NavBar";
 
 export const Register = () => {
@@ -12,7 +11,7 @@ export const Register = () => {
     });
     const[emailErr,setEmailErr] = useState("");
     const[passwordErr,setPasswordErr] = useState("");
-    const[password2Err, setPassword2Err] = useState("")
+    const[password2Err, setPassword2Err] = useState("");
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -34,7 +33,7 @@ export const Register = () => {
             setPasswordErr("");
         }
         if(user.password2 !== user.password) {
-            setPassword2Err('Podane hasło nie jest! ')
+            setPassword2Err('Podane hasło nie jest takie samo! ')
         } else{
             setPassword2Err('')
         }
@@ -42,7 +41,7 @@ export const Register = () => {
 
     return (
         <>
-            <div id='Header' className={"row"}>
+            <div className={"row"}>
                 <div className={"col-5"}/>
                 <div className={"col-7"}>
                     <NavBar />

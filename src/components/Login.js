@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import Decoration from "../assets/Decoration.svg";
-import {HashLink} from 'react-router-hash-link';
 import {NavBar} from "./NavBar";
 
 export const Login = () => {
@@ -35,7 +34,7 @@ export const Login = () => {
 
     return (
         <>
-            <div id='Header' className={"row"}>
+            <div className={"row"}>
                 <div className={"col-5"}/>
                 <div className={"col-7"}>
                     <NavBar />
