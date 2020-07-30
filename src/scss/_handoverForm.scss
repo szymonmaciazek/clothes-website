@@ -19,15 +19,67 @@
   color: $col-grafit;
 }
 
-.form__steps-container{
+.steps__form-container{
   background-image: url("./.././assets/Background-Form.jpg");
   background-size: cover;
   background-position: center;
-  height: 40vw;
+  height: 45vw;
   background-repeat: no-repeat;
 }
 
 .steps__form{
   display: flex;
   flex-direction: column;
+  margin: 2% 0 0 8%;
 }
+
+.steps__counter {
+  font-size: 24px;
+  font-weight: lighter;
+  color: $col-grafit;
+  margin-bottom: 2%;
+}
+
+.steps__form-title{
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+
+.radio__box{
+  margin-bottom: 1%;
+  display: flex;
+  align-items: center;
+}
+
+.steps__form-radio{
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  border: 0.75px solid $col-grafit;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 20px;
+
+    &:checked {
+      background-color: $col-yellow;
+    }
+}
+
+.steps__form-label{
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.steps__submit{
+  width: 150px;
+  height: 60px;
+  background: transparent;
+  margin: 2% 0 0 1%;
+  border: 0.75px solid $col-grafit;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+

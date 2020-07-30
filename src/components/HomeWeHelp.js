@@ -35,12 +35,12 @@ export const HomeWeHelp = () => {
             setWhoLoc("help__button")
             setWhoOrg("help__button")
         }
-        else if(company === organizations){
+        else if (company === organizations){
             setWhoFun("help__button")
             setWhoLoc("help__button")
             setWhoOrg("help__button active")
         }
-        else if(company === local){
+        else if (company === local){
             setWhoFun("help__button ")
             setWhoLoc("help__button active")
             setWhoOrg("help__button")

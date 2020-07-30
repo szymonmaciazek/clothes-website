@@ -24,17 +24,20 @@ export const Register = () => {
         e.preventDefault()
         if (user.email.length < 5 && !user.email.includes("@")) {
             setEmailErr("Podany email jest nieprawidłowy!");
-        } else {
+        }
+        else {
             setEmailErr("");
         }
         if (user.password.length < 6) {
             setPasswordErr("Podane hasło jest za krótkie!");
-        } else {
+        }
+        else {
             setPasswordErr("");
         }
         if(user.password2 !== user.password) {
             setPassword2Err('Podane hasło nie jest takie samo! ')
-        } else{
+        }
+        else{
             setPassword2Err('')
         }
     }

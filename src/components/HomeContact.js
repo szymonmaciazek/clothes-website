@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Decoration from "../assets/Decoration.svg";
+import {HomeFooter} from "./HomeFooter"
 
 export const HomeContact = () => {
     const [contactName, setContactName] = useState('');
@@ -16,7 +17,7 @@ export const HomeContact = () => {
         message: contactNotice
     });
 
-    const handleSubmitMessage = () =>{
+    const handleSubmitMessage = () => {
         let newMessage = {
             name: contactName.trim(),
             email: contactEmail,
@@ -24,36 +25,39 @@ export const HomeContact = () => {
         }
         setContactMessage(newMessage);
     }
-    useEffect(() =>{
+    useEffect(() => {
         handleSubmitMessage()
     },[contactNotice, contactEmail, contactName])
-    const handleContactName = (e) =>{
+    const handleContactName = (e) => {
         setContactName(e.target.value)
     }
-    const handleContactEmail = (e) =>{
+    const handleContactEmail = (e) => {
         setContactEmail(e.target.value)
     }
-    const handleContactMessage = (e) =>{
+    const handleContactMessage = (e) => {
         setContactNotice(e.target.value)
     }
     const handleSubmit = () => {
-        if(contactName.length<3 ){
+        if (contactName.length<3 ) {
             setNameErr("Podane imię jest nieprawidłowe!")
-        }else{
+        }
+        else {
             setNameErr("");
         }
-        if(contactEmail<3 && !contactEmail.includes("@")){
+        if (contactEmail<3 && !contactEmail.includes("@")) {
             setEmailErr("Podany email jest nieprawidłowy!")
-        }else{
+        }
+        else {
             setEmailErr("");
         }
-        if(contactNotice.length< 120){
+        if (contactNotice.length< 120) {
             setNoticeErr("Wiadomość musi mieć 120 znaków!")
-        }else{
+        }
+        else {
             setNoticeErr("");
         }
     }
-    const sendMessage = (e) =>{
+    const sendMessage = (e) => {
         e.preventDefault()
         handleSubmit()
         console.log(contactMessage);
@@ -67,12 +71,12 @@ export const HomeContact = () => {
                 }
             })
                 .then((response) => {
-                    if(response.status === 200){
+                    if (response.status === 200) {
                         setSuccessMessage("Wiadomość została wysłana! Wkrótce sie skontaktujemy")
                         setSendMessageClass('contact__sendMessage')
                         resetForm()
                         return response.json();
-                    } else if(response.status === 400){
+                    } else if(response.status === 400) {
                         setSuccessMessage("Błąd serwera! Wiadomość nie została wysłana")
                         setSendMessageClass('contact__sendMessage contact__sendMessage-warning')
                         console.log(response);
@@ -80,11 +84,12 @@ export const HomeContact = () => {
                 })
                 .then( data => console.log(data))
                 .catch( err => console.log(err));
-        }else{
+        }
+        else {
             return false
         }
     }
-    const resetForm = () =>{
+    const resetForm = () => {
         setContactName('');
         setContactEmail('');
         setContactNotice('');
@@ -130,16 +135,7 @@ export const HomeContact = () => {
                         </div>
                     </form>
                 </div>
-                <div className={'footer'}>
-                    <div className={'footer1 col-4'}/>
-                    <div className={'footer2 col-4'}>
-                        <span className={'copyright '}>Copyright by CodersLab</span>
-                    </div>
-                    <div className={'footer__media col-4'}>
-                        <a className={'facebook'} href={'http://facebook.com'} alt={'Facebook'}/>
-                        <a className={'instagram'} href={'http://instagram.com'} alt={'Instagram'}/>
-                    </div>
-                </div>
+                <HomeFooter />
             </div>
         </>
     )
