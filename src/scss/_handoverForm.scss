@@ -23,7 +23,7 @@
   background-image: url("./.././assets/Background-Form.jpg");
   background-size: cover;
   background-position: center;
-  height: 45vw;
+  height: 80vh;
   background-repeat: no-repeat;
 }
 
@@ -88,10 +88,70 @@
 
 }
 
-
 .step2__button-box{
   margin-top: 20%;
  }
 
 
+.steps__form-radio1{
+  width: 200px;
+  height: 40px;
+  margin: 0;
+}
+
+//STEP 3
+
+
+.beneficiary__container {
+  margin: 2% 0;
+}
+
+.beneficiary__title {
+  font-size: 24px;
+  color: $col-grafit;
+  font-weight: bold;
+}
+
+.beneficiary__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.beneficiary__element {
+  border: 0.75px solid $col-grafit;
+  font-weight: lighter;
+  padding: 8px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 2% 1% 0;
+}
+
+
+.beneficiary__organization-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 0;
+}
+
+.beneficiary__label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1%;
+
+}
+
+.beneficiary__input {
+  width: 400px;
+  border: 0.75px solid $col-grafit;
+  font-size: 24px;
+  background: transparent;
+  font-weight: 300;
+  color: $col-grafit;
+}
+
+.step3__button-box{
+  margin-top: 30px;
+}
 
