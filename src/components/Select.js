@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Arrow from './.././assets/Icon-Arrow-Down.svg'
 
 export const Select = ({title, items}) => {
     const [open, setOpen] = useState(false);
@@ -16,10 +17,10 @@ export const Select = ({title, items}) => {
 
     return (
             <div>
-                <div className={(open === false ? 'select__box' : 'select__box arrow__rotate')} onClick={handleOpen}>
-                    <p className={'select__title'}>{selectedItem(title)}</p>
+                <div className={'select__box'} onClick={handleOpen}>
+                    <p className={'select__title'}>{selectedItem(title)} </p> <img className={(open === false ? 'arrow__rotate1' : 'arrow__rotate2')} alt={'arrow'} src={Arrow} />
                 </div>
-                <div>
+                <div className={'select__items-box'}>
                     {open && (
                         <ul className={'select__list'} onClick={handleOpen}>
                             {items.map((item, index) => (

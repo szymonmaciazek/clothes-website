@@ -1,21 +1,32 @@
 .select__box{
-  display: flex;
-  align-items: center;
   width: 200px;
-  height: 30px;
-  background: url("./.././assets/Icon-Arrow-Down.svg") 100% 80% no-repeat;
+  height: 33px;
   border: 0.75px solid $col-grafit;
-  padding-left: 10px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.arrow__rotate{
-  background: url("./.././assets/Icon-Arrow-Up.svg") 100% 80% no-repeat;
+.arrow__rotate2{
+  transform: rotate(180deg);
+  transition: transform 1s;
+}
+
+.arrow__rotate1{
+  transition: transform 1s;
+}
+
+.select__items-box{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .select__title{
   font-weight: lighter;
+  text-align: center;
   user-select: none;
+  margin-left: 5px;
 }
 
 .select__list{
@@ -24,13 +35,16 @@
   cursor: pointer;
   margin-top: 10px;
   user-select: none;
+  text-align: center;
 }
 
 .select__item{
-  padding: 6px 20px;
+  padding: 6px 25px;
   font-weight: lighter;
+  font-size: 18px;
 
   &:hover{
     background: darken($col-bone, 10%);
   }
 }
+
