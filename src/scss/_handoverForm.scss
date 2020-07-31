@@ -1,4 +1,4 @@
-.warning__box{
+.important__box{
   height: 140px;
   width: 100%;
   background-color: $col-yellow;
@@ -7,13 +7,13 @@
   justify-content: center;
 }
 
-.warning__title{
+.important__title{
   margin: 0 0 8px 8%;
   font-size: 36px;
   font-weight: bold;
 }
 
-.warning__text{
+.important__text{
   margin: 0 8% 0 8%;
   font-size: 22px;
   color: $col-grafit;
@@ -41,7 +41,7 @@
 }
 
 .steps__form-title{
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 3%;
 }
@@ -70,6 +70,11 @@
 .steps__form-label{
   font-size: 24px;
   font-weight: lighter;
+  margin: 3px 2% 0 0;
+}
+
+.steps__select-box{
+  display: flex;
 }
 
 .steps__submit{
@@ -80,6 +85,13 @@
   border: 0.75px solid $col-grafit;
   cursor: pointer;
   align-self: flex-start;
+
 }
+
+
+.step2__button-box{
+  margin-top: 20%;
+ }
+
 
 

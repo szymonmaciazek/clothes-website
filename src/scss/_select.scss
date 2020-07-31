@@ -1,0 +1,36 @@
+.select__box{
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  background: url("./.././assets/Icon-Arrow-Down.svg") 100% 80% no-repeat;
+  border: 0.75px solid $col-grafit;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.arrow__rotate{
+  background: url("./.././assets/Icon-Arrow-Up.svg") 100% 80% no-repeat;
+}
+
+.select__title{
+  font-weight: lighter;
+  user-select: none;
+}
+
+.select__list{
+  position: absolute;
+  border: 0.75px solid $col-grafit;
+  cursor: pointer;
+  margin-top: 10px;
+  user-select: none;
+}
+
+.select__item{
+  padding: 6px 20px;
+  font-weight: lighter;
+
+  &:hover{
+    background: darken($col-bone, 10%);
+  }
+}
