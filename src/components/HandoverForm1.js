@@ -1,14 +1,17 @@
 import React from "react";
 import {Important} from "./Important";
 
-export const HandoverForm1 = () => {
+export const HandoverForm1 = ({currForm, next}) => {
 
+    if (currForm !== 1) {
+        return null
+    }
     return (
         <>
-            <Important info={'Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.'}/>
+            <Important id='form' info={'Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.'}/>
             <div className={'row'}>
                 <div className={'col-12 steps__form-container'}>
-                    <form className={'steps__form'}>
+                    <form  className={'steps__form'}>
                     <p className={'steps__counter'}>1/4</p>
                         <h2 className={'steps__form-title'}>Zaznacz co chcesz oddać:</h2>
                         <div className={'radio__box'}>
@@ -31,7 +34,7 @@ export const HandoverForm1 = () => {
                             <input type={'radio'} name={'inpStep1'} className={'steps__form-radio'}/>
                             <label className={'steps__form-label'}>Inne</label>
                         </div>
-                        <button className={'steps__submit'}>Dalej</button>
+                        <button onClick={next} className={'steps__submit'}>Dalej</button>
                     </form>
                 </div>
             </div>

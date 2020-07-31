@@ -1,0 +1,42 @@
+.personal__form{
+  display: flex;
+}
+
+.personal__title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+
+.personal__box{
+  margin-right: 50px;
+}
+
+.personal__wrap{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal__label{
+  font-size: 18px;
+  font-weight: lighter;
+  margin-right: 20px;
+  line-height: 1.4;
+}
+
+.personal__input{
+  height: 30px;
+  background: transparent;
+  border: 0.75px solid #3C3C3C;
+}
+
+.personal__textarea{
+  height: 90px;
+  background: transparent;
+  border: 0.75px solid #3C3C3C;
+  resize: none;
+}
+

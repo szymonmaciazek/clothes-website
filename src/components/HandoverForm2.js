@@ -2,8 +2,11 @@ import React from "react";
 import {Important} from "./Important";
 import {Select} from "./Select";
 
-export const HandoverForm2 = () => {
+export const HandoverForm2 = ({currForm, prev, next}) => {
 
+    if (currForm !== 2) {
+        return null
+    }
     return (
         <>
             <Important info={'Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie' +
@@ -19,8 +22,8 @@ export const HandoverForm2 = () => {
                                 <Select title={'— wybierz —'} items={[1, 2, 3, 4, 5]} />
                             </div>
                             <div className={'step2__button-box'}>
-                                <button className={'steps__submit'}>Wstecz</button>
-                                <button className={'steps__submit'}>Dalej</button>
+                                <button onClick={prev} className={'steps__submit'}>Wstecz</button>
+                                <button onClick={next} className={'steps__submit'}>Dalej</button>
                             </div>
                         </div>
                     </form>

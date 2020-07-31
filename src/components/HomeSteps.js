@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+// import {HashLink} from "react-router-hash-link/src";
 import Decoration from "../assets/Decoration.svg";
 import Icon1 from "../assets/Icon-1.svg";
 import Icon2 from "../assets/Icon-2.svg";
