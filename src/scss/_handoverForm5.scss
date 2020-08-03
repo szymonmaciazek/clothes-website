@@ -1,0 +1,44 @@
+.personal__wrap-summary{
+  //justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+.personal__label-summary{
+  font-size: 18px;
+  font-weight: lighter;
+  margin-right: 20px;
+  line-height: 1.4;
+}
+
+.personal__input-summary{
+  border: none;
+  font-weight: lighter;
+  text-align: left;
+  height: auto;
+  font-size: 18px;
+}
+
+.textarea__summary-box{
+  //width: 160px;
+}
+
+.personal__textarea-summary{
+
+  border: none;
+  height: auto;
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 10px 0 0 10px;
+
+
+}
+.textarea__summary-box{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: left;
+  align-items: initial;
+  height: 50px;
+  max-width: 300px;
+
+}

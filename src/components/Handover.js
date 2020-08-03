@@ -4,6 +4,7 @@ import {HandoverForm1} from "./HandoverForm1";
 import {HandoverForm2} from "./HandoverForm2";
 import {HandoverForm3} from "./HandoverForm3";
 import {HandoverForm4} from "./HandoverForm4";
+import {HandoverForm5} from "./HandoverForm5";
 import {HomeContact} from "./HomeContact";
 
 export const Handover = () => {
@@ -22,10 +23,14 @@ export const Handover = () => {
     return (
         <>
             <HandoverHeader/>
+
+            <HandoverForm5 prev={prev} next={next} currForm={currForm} />
+
             <HandoverForm1 next={next} currForm={currForm}/>
             <HandoverForm2 prev={prev} next={next} currForm={currForm}/>
             <HandoverForm3 prev={prev} next={next} currForm={currForm} />
             <HandoverForm4 prev={prev} next={next} currForm={currForm} />
+            <HandoverForm5 prev={prev} next={next} currForm={currForm} />
             <HomeContact />
         </>
     )

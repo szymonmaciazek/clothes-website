@@ -6,6 +6,7 @@ import Icon1 from "../assets/Icon-1.svg";
 import Icon2 from "../assets/Icon-2.svg";
 import Icon3 from "../assets/Icon-3.svg";
 import Icon4 from "../assets/Icon-4.svg";
+import {Step} from "./Step";
 
 export const HomeSteps = () => {
     return (
@@ -15,12 +16,17 @@ export const HomeSteps = () => {
                 <img src={Decoration} alt={'Decoration'}/>
                 <div className={'col-12 steps__content'}>
                     <div className={'col-8 steps__content-container'}>
+
+                        {/*<Step img={'Icon1'} title={'Wybierz rzeczy'} text={(`ubrania, zabawki,${<br/>}sprzęt i inne`)} />*/}
+
+
                         <div className={'steps__content-column'}>
                             <img src={Icon1} alt={'Icon-1'}/>
                             <p className={'steps__content-column-title'}>Wybierz rzeczy</p>
                             <hr className={'steps__line'}/>
                             <p className={'steps__content-column-text'}>ubrania, zabawki,<br/> sprzęt i inne</p>
                         </div>
+
                         <div className={'steps__content-column'}>
                             <img src={Icon2} alt={'Icon-2'}/>
                             <p className={'steps__content-column-title'}>Spakuj je</p>

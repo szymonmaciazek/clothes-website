@@ -14,7 +14,7 @@ export const HandoverForm4 = ({currForm, prev, next}) => {
                     <form className={'steps__form'}>
                         <p className={'steps__counter'}>4/4</p>
                         <h2 className={'steps__form-title'}>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
-                        <form className={'personal__form'}>
+                        <div className={'personal__form'}>
                             <div className={'personal__box'}>
                                 <h2 className={'personal__title'}>Adres odbioru:</h2>
                                 <div className={'personal__wrap'}>
@@ -42,15 +42,14 @@ export const HandoverForm4 = ({currForm, prev, next}) => {
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Godzina</label>
-                                    <input className={'personal__input'} type={'time'}/>
+                                    <input className={'personal__input'} type={'text'}/>
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Uwagi<br/>dla kuriera</label>
-                                    <textarea className={'personal__textarea'} type={'text'}/>
+                                    <textarea className={'personal__textarea'}/>
                                 </div>
                             </div>
-                        </form>
-
+                        </div>
                         <div className={'step2__button-box step3__button-box'}>
                             <button onClick={prev} className={'steps__submit'}>Wstecz</button>
                             <button onClick={next} className={'steps__submit'}>Dalej</button>
