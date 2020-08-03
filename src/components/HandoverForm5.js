@@ -1,19 +1,34 @@
 import React from "react";
+import Icon1 from "../assets/Icon-1.svg";
+import Icon4 from "../assets/Icon-4.svg";
+
 
 export const HandoverForm5 = ({currForm, prev, next}) => {
 
-    // if (currForm !== 5) {
-    //     return null
-    // }
+    if (currForm !== 5) {
+        return null
+    }
     return (
         <>
             <div className={'row'}>
                 <div className={'col-12 steps__form-container'}>
-                    <form className={'steps__form'}>
+                    <div className={'steps__form'}>
                         <h2 className={'steps__form-title'}>Podsumowanie Twojej darowizny</h2>
+                        <div className={'summary__items-box'}>
+                            <h3 className={'personal__title'}>Oddajesz:</h3>
+                            <div className={'summary__item'}>
+                                <img className={'summary__item-img'} src={Icon1} alt={'Icon-1'}/>
+                                <p className={'summary__item-text'}>4 worki, ubrania w dobrym stanie</p>
+                            </div>
+                            <div className={'summary__item'}>
+                                <img className={'summary__item-img'} src={Icon4} alt={'Icon-4'}/>
+                                <p className={'summary__item-text'}>dla lokalizacji: Warszawa</p>
+                            </div>
+                        </div>
                         <div className={'personal__form'}>
+
                             <div className={'personal__box'}>
-                                <h2 className={'personal__title'}>Adres odbioru:</h2>
+                                <h3 className={'personal__title'}>Adres odbioru:</h3>
                                 <div className={'personal__wrap personal__wrap-summary'}>
                                     <p className={'personal__label personal__label-summary'}>Ulica</p>
                                     <p className={'personal__input personal__input-summary'}>Prosta 51</p>
@@ -32,7 +47,7 @@ export const HandoverForm5 = ({currForm, prev, next}) => {
                                 </div>
                             </div>
                             <div className={'personal__box'}>
-                                <h2 className={'personal__title'}>Termin odbioru:</h2>
+                                <h3 className={'personal__title'}>Termin odbioru:</h3>
                                 <div className={'personal__wrap personal__wrap-summary'}>
                                     <p className={'personal__label personal__label-summary'}>Data</p>
                                     <p className={'personal__input personal__input-summary'}>25.04.2019</p>
@@ -49,11 +64,11 @@ export const HandoverForm5 = ({currForm, prev, next}) => {
                                 </div>
                             </div>
                         </div>
-                        <div className={'step2__button-box step3__button-box'}>
+                        <div className={'steps__buttons'}>
                             <button onClick={prev} className={'steps__submit'}>Wstecz</button>
                             <button onClick={next} className={'steps__submit'}>Potwierdzam</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </>

@@ -50,7 +50,7 @@ export const HandoverForm4 = ({currForm, prev, next}) => {
                                 </div>
                             </div>
                         </div>
-                        <div className={'step2__button-box step3__button-box'}>
+                        <div className={'step__buttons'}>
                             <button onClick={prev} className={'steps__submit'}>Wstecz</button>
                             <button onClick={next} className={'steps__submit'}>Dalej</button>
                         </div>

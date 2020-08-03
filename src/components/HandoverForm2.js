@@ -21,7 +21,7 @@ export const HandoverForm2 = ({currForm, prev, next}) => {
                                 <label className={'steps__form-label'}>Liczba 60l worków:</label>
                                 <Select title={'— wybierz —'} items={[1, 2, 3, 4, 5]} />
                             </div>
-                            <div className={'step2__button-box'}>
+                            <div className={'step__buttons'}>
                                 <button onClick={prev} className={'steps__submit'}>Wstecz</button>
                                 <button onClick={next} className={'steps__submit'}>Dalej</button>
                             </div>

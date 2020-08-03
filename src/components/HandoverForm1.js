@@ -34,7 +34,9 @@ export const HandoverForm1 = ({currForm, next}) => {
                             <input type={'radio'} name={'inpStep1'} className={'steps__form-radio'}/>
                             <label className={'steps__form-label'}>Inne</label>
                         </div>
-                        <button onClick={next} className={'steps__submit'}>Dalej</button>
+                        <div className={'step__buttons'}>
+                             <button onClick={next} className={'steps__submit'}>Dalej</button>
+                        </div>
                     </form>
                 </div>
             </div>
