@@ -5,7 +5,7 @@
 .summary__item{
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .summary__item-img{
@@ -15,14 +15,10 @@
 }
 
 .summary__item-text{
-  font-size: 20px;
+  font-size: 18px;
 }
 
-
-
-
 .personal__wrap-summary{
-  //justify-content: flex-start;
   margin-bottom: 14px;
 }
 
@@ -42,28 +38,22 @@
 }
 
 .textarea__summary-box{
-  //width: 160px;
 }
 
 .personal__textarea-summary{
-
   border: none;
   height: auto;
   font-size: 14px;
   font-weight: lighter;
-  margin: 10px 0 0 10px;
-
-
+  margin: 4px 0 0 8px;
 }
 .textarea__summary-box{
   display: flex;
-
   flex-direction: column;
   justify-content: left;
   align-items: initial;
   height: 50px;
   max-width: 300px;
-
 }
 
 .thanks__container{

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-// import {HashLink} from "react-router-hash-link/src";
 import Decoration from "../assets/Decoration.svg";
 import Icon1 from "../assets/Icon-1.svg";
 import Icon2 from "../assets/Icon-2.svg";
@@ -16,35 +15,22 @@ export const HomeSteps = () => {
                 <img src={Decoration} alt={'Decoration'}/>
                 <div className={'col-12 steps__content'}>
                     <div className={'col-8 steps__content-container'}>
-
-                        {/*<Step img={'Icon1'} title={'Wybierz rzeczy'} text={(`ubrania, zabawki,${<br/>}sprzęt i inne`)} />*/}
-
-
-                        <div className={'steps__content-column'}>
-                            <img src={Icon1} alt={'Icon-1'}/>
-                            <p className={'steps__content-column-title'}>Wybierz rzeczy</p>
-                            <hr className={'steps__line'}/>
-                            <p className={'steps__content-column-text'}>ubrania, zabawki,<br/> sprzęt i inne</p>
-                        </div>
-
-                        <div className={'steps__content-column'}>
-                            <img src={Icon2} alt={'Icon-2'}/>
-                            <p className={'steps__content-column-title'}>Spakuj je</p>
-                            <hr className={'steps__line'}/>
-                            <p className={'steps__content-column-text'}>skorzystaj z<br/> worków na śmieci</p>
-                        </div>
-                        <div className={'steps__content-column'}>
-                            <img src={Icon3} alt={'Icon-3'}/>
-                            <p className={'steps__content-column-title'}>Zdecyduj komu chcesz pomóc</p>
-                            <hr className={'steps__line'}/>
-                            <p className={'steps__content-column-text'}>wybierz zaufane<br/> miejsce</p>
-                        </div>
-                        <div className={'steps__content-column'}>
-                            <img src={Icon4} alt={'Icon-4'}/>
-                            <p className={'steps__content-column-title'}>Zamów kuriera</p>
-                            <hr className={'steps__line'}/>
-                            <p className={'steps__content-column-text'}>kurier przyjedzie<br/> w dogodnym terminie</p>
-                        </div>
+                        <Step
+                            img={Icon1}
+                            title={'Wybierz rzeczy'}
+                            text={'ubrania, zabawki, sprzęt i inne'} />
+                        <Step
+                            img={Icon2}
+                            title={'Spakuj je'}
+                            text={'skorzystaj z worków na śmieci'} />
+                        <Step
+                            img={Icon3}
+                            title={'Zdecyduj komu chcesz pomóc'}
+                            text={'wybierz zaufane miejsce'} />
+                        <Step
+                            img={Icon4}
+                            title={'Zamów kuriera'}
+                            text={'kurier przyjedzie w dogodnym terminie'} />
                     </div>
                 </div>
                 <Link to={'/login'} href={'#'} className={'header__btn steps__btn'}>oddaj <br/> rzeczy</Link>

@@ -27,7 +27,8 @@
 }
 
 .steps__content-column {
-  width: 20%;
+  width: 18%;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,21 +38,24 @@
 .steps__content-column-title {
   font-size: 18px;
   text-align: center;
-  margin: 10px 0;
+  width: 140px;
+}
+
+.steps__content-wrap{
+  height: 35px;
+  padding: 20px 0;
+  border-bottom: 0.75px solid $col-gray;
+  display: flex;
+  align-items: center;
 }
 
 .steps__content-column-text {
   font-size: 16px;
   text-align: center;
-}
-
-.steps__line {
-  width: 50%;
-  margin: 15px 0;
+  height: 35px;
+  margin-top: 10px;
 }
 
 .steps__btn {
   align-self: center;
 }
-
-//STEP 3

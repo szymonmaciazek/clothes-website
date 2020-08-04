@@ -58,7 +58,7 @@ export const HandoverForm5 = ({currForm, prev, next}) => {
                                 </div>
                                 <div className={'personal__wrap textarea__summary-box'}>
                                     <p className={'personal__label personal__label-summary'}>Uwagi<br/>dla kuriera:</p>
-                                    <p className={'personal__textarea personal__textarea-summary'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, magni.</p>
+                                    <p className={'personal__textarea personal__textarea-summary'}>Lore.</p>
 
 
                                 </div>
