@@ -2,7 +2,7 @@ import React from "react";
 import {Important} from "./Important";
 import {Select} from "./Select";
 
-export const HandoverForm2 = ({currForm, prev, next}) => {
+export const HandoverForm2 = ({currForm, prev, next, selectChange}) => {
 
     if (currForm !== 2) {
         return null
@@ -19,7 +19,7 @@ export const HandoverForm2 = ({currForm, prev, next}) => {
                         <div>
                             <div className={'steps__select-box'}>
                                 <label className={'steps__form-label'}>Liczba 60l worków:</label>
-                                <Select title={'— wybierz —'} items={[1, 2, 3, 4, 5]} />
+                                <Select title={'— wybierz —'} selectChange={selectChange} ident={'bags'} items={[1, 2, 3, 4, 5]} />
                             </div>
                             <div className={'step__buttons'}>
                                 <button onClick={prev} className={'steps__submit'}>Wstecz</button>

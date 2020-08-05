@@ -10,7 +10,43 @@ import {HomeContact} from "./HomeContact";
 
 export const Handover = () => {
     const [currForm, setCurrForm] = useState(1);
+    const [giveAway, setGiveaway] = useState({
+        collection: "",
+        bags: "",
+        cityTo: "",
+        recipients: {
+            kids: false,
+            singleMother: false,
+            homeless: false,
+            disabled: false,
+            elder: false
+        },
+        organization: "",
+        street: "",
+        city: "",
+        postCode: "",
+        phoneNumber: 0,
+        date: "",
+        time: "",
+        notice: ""
+    })
 
+    const handleChangeGiveAwayData = e => {
+        const {name,value} = e.target;
+        setGiveaway(prev => ({
+                ...prev,
+                [name]: value
+            })
+        );
+    }
+
+    const handleDataID = e => {
+        const {id} = e.target;
+        setGiveaway(prev => ({
+            ...prev,
+            [id]: e.target.innerText
+        }))
+    }
 
     const prev = (e) => {
         e.preventDefault()
@@ -24,9 +60,9 @@ export const Handover = () => {
     return (
         <>
             <HandoverHeader/>
-            <HandoverForm1 next={next} currForm={currForm} />
-            <HandoverForm2 prev={prev} next={next} currForm={currForm} />
-            <HandoverForm3 prev={prev} next={next} currForm={currForm} />
+            <HandoverForm1 next={next} currForm={currForm} dataChange={handleChangeGiveAwayData} />
+            <HandoverForm2 prev={prev} next={next} currForm={currForm} selectChange={handleDataID} />
+            <HandoverForm3 prev={prev} next={next} currForm={currForm} selectChange={handleDataID} dataChange={handleChangeGiveAwayData} />
             <HandoverForm4 prev={prev} next={next} currForm={currForm} />
             <HandoverForm5 prev={prev} next={next} currForm={currForm} />
             <HandoverForm6 currForm={currForm} />

@@ -2,7 +2,7 @@ import React from "react";
 import {Important} from "./Important";
 import {Select} from "./Select";
 
-export const HandoverForm3 = ({currForm, prev, next}) => {
+export const HandoverForm3 = ({currForm, prev, next, selectChange, dataChange}) => {
 
     if (currForm !== 3) {
         return null
@@ -17,7 +17,7 @@ export const HandoverForm3 = ({currForm, prev, next}) => {
                         <p className={'steps__counter'}>3/4</p>
                         <h2 className={'steps__form-title'}>Lokalizacja:</h2>
                             <div className={'steps__select-box'}>
-                                <Select title={'— wybierz —'} items={['Warszawa', 'Poznań', 'Kraków', 'Wrocław']} />
+                                <Select title={'— wybierz —'} selectChange={selectChange} ident={'cityTo'} items={['Warszawa', 'Poznań', 'Kraków', 'Wrocław']} />
                             </div>
                             <div className={"beneficiary__container"}>
                                 <h3 className={"beneficiary__title"}>Komu chcesz pomóc?</h3>
@@ -33,7 +33,7 @@ export const HandoverForm3 = ({currForm, prev, next}) => {
                                 <label className={"beneficiary__label"}>
                                     Wpisz nazwę konkretnej organizacji (opcjonalne)
                                 </label>
-                                <input className={"beneficiary__input"} type={"text"}/>
+                                <input className={"beneficiary__input"} name={'organization'} onChange={dataChange} type={"text"}/>
                             </div>
                             <div className={'step__buttons'}>
                                 <button onClick={prev} className={'steps__submit'}>Wstecz</button>
