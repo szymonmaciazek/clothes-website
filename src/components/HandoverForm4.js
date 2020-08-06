@@ -1,7 +1,7 @@
 import React from "react";
 import {Important} from "./Important";
 
-export const HandoverForm4 = ({currForm, prev, next}) => {
+export const HandoverForm4 = ({currForm, prev, next, dataChange}) => {
 
     if (currForm !== 4) {
         return null
@@ -19,34 +19,34 @@ export const HandoverForm4 = ({currForm, prev, next}) => {
                                 <h2 className={'personal__title'}>Adres odbioru:</h2>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Ulica</label>
-                                    <input className={'personal__input'} type={'text'}/>
+                                    <input onChange={dataChange} name={'street'} className={'personal__input'} type={'text'}/>
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Miasto</label>
-                                    <input className={'personal__input'} type={'text'}/>
+                                    <input onChange={dataChange} name={'city'} className={'personal__input'} type={'text'}/>
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Kod<br/>pocztowy</label>
-                                    <input className={'personal__input'} type={'text'}/>
+                                    <input onChange={dataChange} name={'postCode'} className={'personal__input'} type={'text'}/>
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Numer<br/>telefonu</label>
-                                    <input className={'personal__input'} type={'phone'}/>
+                                    <input onChange={dataChange} name={'phoneNumber'} className={'personal__input'} type={'phone'}/>
                                 </div>
                             </div>
                             <div className={'personal__box'}>
                                 <h2 className={'personal__title'}>Termin odbioru:</h2>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Data</label>
-                                    <input className={'personal__input'} type={'data'}/>
+                                    <input onChange={dataChange} name={'date'} className={'personal__input'} type={'data'}/>
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Godzina</label>
-                                    <input className={'personal__input'} type={'text'}/>
+                                    <input onChange={dataChange} name={'time'} className={'personal__input'} type={'text'}/>
                                 </div>
                                 <div className={'personal__wrap'}>
                                     <label className={'personal__label'}>Uwagi<br/>dla kuriera</label>
-                                    <textarea className={'personal__textarea'}/>
+                                    <textarea onChange={dataChange} name={'notice'} className={'personal__textarea'}/>
                                 </div>
                             </div>
                         </div>

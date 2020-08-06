@@ -48,6 +48,14 @@ export const Handover = () => {
         }))
     }
 
+    // const handleRecipients = e => {
+    //     const {id} = e.target;
+    //     setGiveaway(prev => ({
+    //         ...prev,
+    //         recipients.id : ""
+    //     }))
+    // }
+
     const prev = (e) => {
         e.preventDefault()
         setCurrForm(prev => prev - 1)
@@ -60,12 +68,32 @@ export const Handover = () => {
     return (
         <>
             <HandoverHeader/>
-            <HandoverForm1 next={next} currForm={currForm} dataChange={handleChangeGiveAwayData} />
-            <HandoverForm2 prev={prev} next={next} currForm={currForm} selectChange={handleDataID} />
-            <HandoverForm3 prev={prev} next={next} currForm={currForm} selectChange={handleDataID} dataChange={handleChangeGiveAwayData} />
-            <HandoverForm4 prev={prev} next={next} currForm={currForm} />
-            <HandoverForm5 prev={prev} next={next} currForm={currForm} />
-            <HandoverForm6 currForm={currForm} />
+            <HandoverForm1
+                next={next}
+                currForm={currForm}
+                dataChange={handleChangeGiveAwayData}/>
+            <HandoverForm2
+                prev={prev}
+                next={next}
+                currForm={currForm}
+                selectChange={handleDataID} />
+            <HandoverForm3
+                prev={prev}
+                next={next}
+                currForm={currForm}
+                selectChange={handleDataID}
+                dataChange={handleChangeGiveAwayData} />
+            <HandoverForm4
+                prev={prev}
+                next={next}
+                currForm={currForm}
+                dataChange={handleChangeGiveAwayData}/>
+            <HandoverForm5
+                prev={prev}
+                next={next}
+                currForm={currForm} />
+            <HandoverForm6
+                currForm={currForm} />
             <HomeContact />
         </>
     )

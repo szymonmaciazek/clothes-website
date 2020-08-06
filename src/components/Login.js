@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import Decoration from "../assets/Decoration.svg";
 import {NavBar} from "./NavBar";
+import {login} from "../firebase/auth";
 
 export const Login = () => {
     const [user,setUser] = useState({
@@ -18,7 +19,7 @@ export const Login = () => {
             })
         );
     }
-    const handleLogin = (e) => {
+    async function handleLogin (e){
         e.preventDefault()
         if (user.email.length < 5 && !user.email.includes("@")) {
             setEmailErr("Podany email jest nieprawidłowy!");
@@ -29,6 +30,11 @@ export const Login = () => {
             setPasswordErr("Podane hasło jest za krótkie!");
         } else {
             setPasswordErr("");
+        }
+        try {
+            await login(user.email, user.password);
+        } catch (err) {
+            setEmailErr(err.message);
         }
     }
 

@@ -7,6 +7,15 @@ export const HandoverForm3 = ({currForm, prev, next, selectChange, dataChange}) 
     if (currForm !== 3) {
         return null
     }
+    const toggleBg = (e) => {
+        if(e.target.className === 'beneficiary__element'){
+            e.target.className = 'beneficiary__element-yellow'
+        }
+        else {
+            e.target.className = 'beneficiary__element'
+        }
+    }
+
     return (
         <>
             <Important info={'Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce.' +
@@ -22,11 +31,11 @@ export const HandoverForm3 = ({currForm, prev, next, selectChange, dataChange}) 
                             <div className={"beneficiary__container"}>
                                 <h3 className={"beneficiary__title"}>Komu chcesz pomóc?</h3>
                                 <ul className={"beneficiary__list"}>
-                                    <li className={"beneficiary__element"}>dzieciom</li>
-                                    <li className={"beneficiary__element"}>samotnym matkom</li>
-                                    <li className={"beneficiary__element"}>bezdomnym</li>
-                                    <li className={"beneficiary__element"}>niepełnosprawnym</li>
-                                    <li className={"beneficiary__element"}>osobom starszym</li>
+                                    <li className={'beneficiary__element'} onClick={toggleBg}>dzieciom</li>
+                                    <li className={'beneficiary__element'} onClick={toggleBg}>samotnym matkom</li>
+                                    <li className={'beneficiary__element'} onClick={toggleBg}>bezdomnym</li>
+                                    <li className={'beneficiary__element'} onClick={toggleBg}>niepełnosprawnym</li>
+                                    <li className={'beneficiary__element'} onClick={toggleBg}>osobom starszym</li>
                                 </ul>
                             </div>
                             <div className={"beneficiary__organization-container"}>

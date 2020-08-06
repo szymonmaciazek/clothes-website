@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Important} from "./Important";
 
 export const HandoverForm1 = ({currForm, next, dataChange}) => {
@@ -6,6 +6,7 @@ export const HandoverForm1 = ({currForm, next, dataChange}) => {
     if (currForm !== 1) {
         return null
     }
+
     return (
         <>
             <Important
@@ -18,7 +19,7 @@ export const HandoverForm1 = ({currForm, next, dataChange}) => {
                         <h2 className={'steps__form-title'}>Zaznacz co chcesz oddać:</h2>
                         <div className={'radio__box'}>
                             <input type={'radio'} onClick={dataChange} value={'ubrania, które nadają się do ponownego użycia'} name={'collection'} className={'steps__form-radio'}/>
-                            <label className={'steps__form-label'}>ubrania, które nadają się do ponownego użycia</label>
+                            <label  className={'steps__form-label'}>ubrania, które nadają się do ponownego użycia</label>
                         </div>
                         <div className={'radio__box'}>
                             <input type={'radio'} onClick={dataChange} value={'ubrania, do wyrzucenia'} name={'collection'} className={'steps__form-radio'}/>

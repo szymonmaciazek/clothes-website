@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import Decoration from "../assets/Decoration.svg";
 import {NavBar} from "./NavBar";
+import {register} from "../firebase/auth";
 
 export const Register = () => {
     const [user,setUser] = useState({
@@ -20,7 +21,7 @@ export const Register = () => {
             })
         );
     }
-    const handleLogin = (e) => {
+    async function handleLogin (e) {
         e.preventDefault()
         if (user.email.length < 5 && !user.email.includes("@")) {
             setEmailErr("Podany email jest nieprawidłowy!");
@@ -39,6 +40,11 @@ export const Register = () => {
         }
         else{
             setPassword2Err('')
+        }
+        try {
+            await register(user.email, user.password);
+        } catch (err) {
+            setEmailErr(err.message);
         }
     }
 
