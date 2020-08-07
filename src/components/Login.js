@@ -3,6 +3,8 @@ import {Link, useHistory} from 'react-router-dom';
 import Decoration from "../assets/Decoration.svg";
 import {NavBar} from "./NavBar";
 import {login} from "../firebase/auth";
+import {auth} from "../firebase/firebase.config";
+import firebase from "firebase";
 
 export const Login = () => {
     const [user,setUser] = useState({
@@ -11,7 +13,10 @@ export const Login = () => {
     });
     const[emailErr,setEmailErr] = useState("");
     const[passwordErr,setPasswordErr] = useState("");
-    const history = useHistory;
+
+    const[userEmail, setUserEmail] = useState('TEST')
+
+    const history = useHistory();
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -34,10 +39,11 @@ export const Login = () => {
         }
         try {
             await login(user.email, user.password);
-            hitory.push('/')
+            history.push("/");
         } catch (err) {
             setEmailErr(err.message);
         }
+        setUserEmail(firebase.auth().currentUser.email)
     }
 
     return (
@@ -52,6 +58,7 @@ export const Login = () => {
                 <div className={'login__container col-12'}>
                     <h2 className={'login__container-title'}>Zaloguj się</h2>
                     <img src={Decoration} alt={'Decoration'}/>
+                    <p>{userEmail}</p>
                     <form onSubmit={handleLogin}>
                         <div className={'login__container-box'}>
                             <div className={'login__container-inputs'}>
@@ -65,7 +72,7 @@ export const Login = () => {
                         </div>
                         <div className={'login__button-box'}>
                             <Link className={'login'} to={'/register'} href={'#'}>Załóż konto</Link>
-                            <input className={'login__submit'} type={'submit'} value={'Zaloguj się'}/>
+                            <input onClick={handleLogin} className={'login__submit'} type={'submit'} value={'Zaloguj się'}/>
                         </div>
                     </form>
                 </div>

@@ -1,13 +1,28 @@
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
-import React from "react";
+import React, {useState} from "react";
+import firebase from "firebase";
+import {auth} from "../firebase/firebase.config";
+import {logOut} from "../firebase/auth";
 
 export const NavBar = () => {
+    const [user] = useState(auth().currentUser);
+
     return (
         <>
             <div className={'login__box'}>
-                <Link className={'login'} to={'/login'} href={'#'}>Zaloguj</Link>
-                <Link className={'login'} to={'/register'} href={'#'}>Załóż konto</Link>
+                {user &&(
+                    <>
+                    <p className={'home__user-email'} >Witaj {auth().currentUser.email}</p>
+                    <Link onClick={logOut} className={'home__login'} to={'/logout'} href={'#'} >Wyloguj</Link>
+                    </>
+                )}
+                {!user && (
+                    <>
+                    <Link className={'home__login'} to={'/login'} href={'#'}>Zaloguj</Link>
+                    <Link className={'home__login'} to={'/register'} href={'#'}>Załóż konto</Link>
+                    </>
+                )}
             </div>
             <ul className={'nav__box'}>
                 <HashLink to={'/#Header'} smooth={true} duration={1000} className={'nav__box-element'}>Start</HashLink>
