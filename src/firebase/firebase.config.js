@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import {firebaseConfig} from './services/secret';
+import {firebaseConfig} from './services/key';
 import 'firebase/auth';
 import 'firebase/database';
 

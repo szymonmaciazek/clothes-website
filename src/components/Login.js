@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import Decoration from "../assets/Decoration.svg";
 import {NavBar} from "./NavBar";
 import {login} from "../firebase/auth";
@@ -11,6 +11,7 @@ export const Login = () => {
     });
     const[emailErr,setEmailErr] = useState("");
     const[passwordErr,setPasswordErr] = useState("");
+    const history = useHistory;
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -33,6 +34,7 @@ export const Login = () => {
         }
         try {
             await login(user.email, user.password);
+            hitory.push('/')
         } catch (err) {
             setEmailErr(err.message);
         }

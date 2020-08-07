@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-/src/services/secret.js
+/src/firebase/services/key.js
 
 # testing
 /coverage
