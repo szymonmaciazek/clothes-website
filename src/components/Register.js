@@ -75,8 +75,8 @@ export const Register = () => {
                             </div>
                         </div>
                         <div className={'login__button-box'}>
-                            <Link className={'login'} to={'/register'} href={'#'}>Załóż konto</Link>
-                            <input className={'login__submit'} type={'submit'} value={'Zaloguj się'}/>
+                            <Link className={'home__login'} to={'/login'} href={'#'}>Zaloguj się</Link>
+                            <input className={'login__submit'} type={'submit'} value={'Załóż konto'}/>
                         </div>
                     </form>
                 </div>

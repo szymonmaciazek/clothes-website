@@ -131,19 +131,9 @@
   cursor: pointer;
 }
 
-.beneficiary__element-yellow{
+.beneficiary__element-checked{
   background: $col-yellow;
-  border: 0.75px solid $col-grafit;
-  font-weight: lighter;
-  padding: 8px 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1% 2% 1% 0;
-  user-select: none;
-  cursor: pointer;
 }
-
 
 .beneficiary__organization-container {
   display: flex;

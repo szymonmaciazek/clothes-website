@@ -1,6 +1,7 @@
 import React from "react";
 import Icon1 from "../assets/Icon-1.svg";
 import Icon4 from "../assets/Icon-4.svg";
+import {Important} from "./Important";
 
 
 export const HandoverForm5 = ({currForm, prev, next}) => {
@@ -10,6 +11,7 @@ export const HandoverForm5 = ({currForm, prev, next}) => {
     }
     return (
         <>
+            <Important info={'Sprawdź czy wszystkie dane się zgadzają'} />
             <div className={'row'}>
                 <div className={'col-12 steps__form-container'}>
                     <div className={'steps__form'}>
@@ -64,7 +66,7 @@ export const HandoverForm5 = ({currForm, prev, next}) => {
                                 </div>
                             </div>
                         </div>
-                        <div className={'steps__buttons'}>
+                        <div className={'step__buttons'}>
                             <button onClick={prev} className={'steps__submit'}>Wstecz</button>
                             <button onClick={next} className={'steps__submit'}>Potwierdzam</button>
                         </div>

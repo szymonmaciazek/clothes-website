@@ -18,7 +18,7 @@ export const HomeHeader = () => {
                         <div className={'header__btn-box'}>
                             <HashLink to={'/handover/#form'} smooth={true} duration={1000} href={'#'}
                                       className={'header__btn'}>oddaj <br/> rzeczy</HashLink>
-                            <Link to={'/login'} href={'#'} className={'header__btn'}>zorganizuj <br/> zbiórkę</Link>
+                            <HashLink to={'/handover'}   href={'#'} className={'header__btn'}>zorganizuj <br/> zbiórkę</HashLink>
                         </div>
                     </div>
                 </div>

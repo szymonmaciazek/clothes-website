@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Important} from "./Important";
 
 export const HandoverForm1 = ({currForm, next, dataChange}) => {
@@ -10,7 +10,6 @@ export const HandoverForm1 = ({currForm, next, dataChange}) => {
     return (
         <>
             <Important
-                id='form'
                 info={'Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.'}/>
             <div className={'row'}>
                 <div className={'col-12 steps__form-container'}>

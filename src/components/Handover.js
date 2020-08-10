@@ -7,6 +7,8 @@ import {HandoverForm4} from "./HandoverForm4";
 import {HandoverForm5} from "./HandoverForm5";
 import {HandoverForm6} from "./HandoverForm6";
 import {HomeContact} from "./HomeContact";
+import {auth} from "firebase";
+import {Login} from "./Login";
 
 export const Handover = () => {
     const [currForm, setCurrForm] = useState(1);
@@ -30,6 +32,7 @@ export const Handover = () => {
         time: "",
         notice: ""
     })
+    const [currUser] = useState(auth().currentUser)
 
     const handleChangeGiveAwayData = e => {
         const {name,value} = e.target;
@@ -39,7 +42,6 @@ export const Handover = () => {
             })
         );
     }
-
     const handleDataID = e => {
         const {id} = e.target;
         setGiveaway(prev => ({
@@ -47,15 +49,6 @@ export const Handover = () => {
             [id]: e.target.innerText
         }))
     }
-
-    // const handleRecipients = e => {
-    //     const {id} = e.target;
-    //     setGiveaway(prev => ({
-    //         ...prev,
-    //         recipients.id : ""
-    //     }))
-    // }
-
     const prev = (e) => {
         e.preventDefault()
         setCurrForm(prev => prev - 1)
@@ -64,6 +57,8 @@ export const Handover = () => {
         e.preventDefault()
         setCurrForm(prev => prev + 1)
     }
+    // if (auth.currentUser === null) return <Login />
+    if(!currUser) return <Login />
 
     return (
         <>

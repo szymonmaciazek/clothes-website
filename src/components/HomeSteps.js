@@ -6,6 +6,7 @@ import Icon2 from "../assets/Icon-2.svg";
 import Icon3 from "../assets/Icon-3.svg";
 import Icon4 from "../assets/Icon-4.svg";
 import {Step} from "./Step";
+import {HashLink} from "react-router-hash-link";
 
 export const HomeSteps = () => {
     return (
@@ -33,7 +34,8 @@ export const HomeSteps = () => {
                             text={'kurier przyjedzie w dogodnym terminie'} />
                     </div>
                 </div>
-                <Link to={'/login'} href={'#'} className={'header__btn steps__btn'}>oddaj <br/> rzeczy</Link>
+                <HashLink to={'/handover/#form'} smooth={true} duration={1000} href={'#'}
+                          className={'header__btn steps__btn'}>oddaj <br/> rzeczy</HashLink>
             </div>
         </>
     )

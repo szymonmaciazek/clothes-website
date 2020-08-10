@@ -9,7 +9,7 @@ export const HandoverForm3 = ({currForm, prev, next, selectChange, dataChange}) 
     }
     const toggleBg = (e) => {
         if(e.target.className === 'beneficiary__element'){
-            e.target.className = 'beneficiary__element-yellow'
+            e.target.className = 'beneficiary__element beneficiary__element-checked'
         }
         else {
             e.target.className = 'beneficiary__element'

@@ -8,8 +8,9 @@ export const Pagination = ({postsPerPage, totalPosts, paginate,currPage}) => {
     return (
         <>
             <ul className="pagination__box">
-                {pageNumbers.map(number => (
-                    <li key={number} className="pagination__elemnt">
+                {(totalPosts > 3) &&
+                pageNumbers.map(number => (
+                    <li key={number} className="pagination__element">
                         <button onClick={() => paginate(number)} className={(currPage === number ? 'pagination__btn-active'
                             :"pagination__btn")}>{number}</button>
                     </li>
@@ -18,4 +19,3 @@ export const Pagination = ({postsPerPage, totalPosts, paginate,currPage}) => {
         </>
     )
 }
-
